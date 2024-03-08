@@ -10,11 +10,13 @@ config interface 'docker'
 	option auto '0'
 
 config interface 'lan'
-	option proto 'static'
-	option netmask '255.255.255.0'
+	option proto 'dhcp'
 	option device 'br-lan'
-	option ipaddr '192.168.2.2'
-	option gateway '192.168.2.1'
+	option auto '1' # 确保这个接口在启动时自动激活
+	# 以下选项在使用DHCP时不需要，可以注释掉或删除
+	# option ipaddr '192.168.2.2'
+	# option netmask '255.255.255.0'
+	# option gateway '192.168.2.1'
 	option delegate '0'
 
 config device
