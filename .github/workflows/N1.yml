@@ -116,11 +116,3 @@ jobs:
           * 基本信息
           账户: root
           密码: password
-
-    - name: Delete old releases
-      uses: dev-drprasad/delete-older-releases@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        keep_latest: 3
-        delete_tags : true
