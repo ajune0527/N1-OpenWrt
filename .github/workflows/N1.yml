@@ -114,7 +114,6 @@ jobs:
         body: |
           首次使用建议全新刷写
           * 基本信息
-          IP: 192.168.2.2
           账户: root
           密码: password
 
@@ -123,5 +122,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        keep_latest: 2
+        keep_latest: 3
         delete_tags : true
